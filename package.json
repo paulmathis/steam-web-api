@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "axios": "^0.17.0"
+  },
+  "name": "steam-web-api",
+  "version": "1.0.0",
+  "description": "Promise based Steam Web API wrapper for Node",
+  "main": "index.js",
+  "author": "Paul Mathis",
+  "license": "MIT"
+}
