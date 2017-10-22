@@ -1,8 +1,7 @@
 const axios = require('axios');
 
-// Refer to
-// https://developer.valvesoftware.com/wiki/Steam_Web_API#Calling_Service_interfa
-// ces for more dtailed api documentation
+// Refer to https://developer.valvesoftware.com/wiki/Steam_Web_API for more
+// dtailed api documentation
 
 class SteamApi {
   constructor(apikey) {
