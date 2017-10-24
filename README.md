@@ -27,8 +27,7 @@ SteamApi = require('./index.js');
 
 steam = new SteamApi('your-steam-api-key');
 
-steam
-  .getOwnedGames({
+steam.playerService.getOwnedGames({
     steamid: 'xxxxxxxxxxxxxx',
     appinfo: 'true',
     playedFreeGames: false
@@ -48,7 +47,7 @@ The first letter is lowercase to match traditional javascript functions.
 ##### functionName({config})
 ```javascript
 // Get News for App
-steam.getNewsForApp({
+steam.news.getNewsForApp({
   appid: '440',
   count: '3',
   maxlength: '300'
