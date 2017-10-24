@@ -28,10 +28,11 @@ SteamApi = require('./index.js');
 steam = new SteamApi('your-steam-api-key');
 
 steam
-  .getOwnedGames('your-steam-id', {
-  appinfo: false,
-  playedFreeGames: false
-})
+  .getOwnedGames({
+    steamid: 'xxxxxxxxxxxxxx',
+    appinfo: 'true',
+    playedFreeGames: false
+  })
   .then(res => {
     console.log(res);
   })
@@ -44,12 +45,13 @@ Method names match the [official steam documentation](https://developer.valvesof
 
 The first letter is lowercase to match traditional javascript functions.
 
-##### functionName((steamid||appid)[,params])
+##### functionName({config})
 ```javascript
 // Get News for App
-steam.getNewsForApp('440', {
-  count: '3'
-  maxlength: 300,
+steam.getNewsForApp({
+  appid: '440',
+  count: '3',
+  maxlength: '300'
 })
   .then(res => {
   console.log(res);
