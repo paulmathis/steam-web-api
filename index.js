@@ -1,11 +1,10 @@
 // Refer to https://developer.valvesoftware.com/wiki/Steam_Web_API for more
 // dtailed api documentation
 
-const { truthy, apiRequest } = require('./helpers');
-const ISteamUserStats = require('./ISteamUserStats');
-const ISteamNews = require('./ISteamNews');
-const IPlayerService = require('./IPlayerService');
-const ISteamUser = require('./ISteamUser');
+const ISteamUserStats = require('./src/ISteamUserStats');
+const ISteamNews = require('./src/ISteamNews');
+const IPlayerService = require('./src/IPlayerService');
+const ISteamUser = require('./src/ISteamUser');
 
 class SteamApi {
   constructor(key, steamid, appid) {

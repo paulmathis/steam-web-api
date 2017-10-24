@@ -1,6 +1,6 @@
 const Base = require('./Base');
 
-const { truthy, apiRequest } = require('./helpers');
+const { truthy } = require('./helpers');
 
 class ISteamNews extends Base {
   getNewsForApp(config) {
@@ -8,7 +8,7 @@ class ISteamNews extends Base {
       count: '3',
       maxlength: '300'
     };
-    return apiRequest(
+    return this._apiRequest(
       'http://api.steampowered.com/ISteamNews/GetNewsForApp/v0002',
       this._mergeConfigs(config, defaults)
     );
